@@ -5,12 +5,10 @@ class CityList extends Component {
   render() {
     return (
       <div>
-        <div className="row">
-          <div className="col s3 teal lighten-2">
+        <div className="col s4 teal lighten-2">
           {/* All Cities Panel */}
           <h2>Cities</h2>
           <CityView />
-          </div>
         </div>
       </div>
     );

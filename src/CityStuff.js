@@ -6,8 +6,12 @@ class CityStuff extends Component {
   render() {
     return (
       <div>
-        <CityInfo />
-        <PostList />
+        <div className='col s8 blue-grey lighten-3'>
+          <div className='row'>
+            <CityInfo />
+          </div>
+          <PostList />
+        </div>
       </div>
     );
   }
