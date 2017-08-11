@@ -1,13 +1,16 @@
 import React, { Component } from "react";
+import styles from "./CityView";
 
 class CityView extends Component {
   render() {
-    return <div>
-      <div className="row blue-grey lighten-3">
-        <img className="left city-nav-img" src="" alt="city"/>
-        <span>San Francisco</span>
+    return (
+      <div>
+        <div className="row blue-grey lighten-3" style={styles.CityStuff}>
+          <img style={styles.cityNavImg} src="" alt="city" />
+          <span> San Francisco </span>{" "}
+        </div>{" "}
       </div>
-    </div>;
+    );
   }
 }
 
