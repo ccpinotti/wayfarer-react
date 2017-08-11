@@ -13,10 +13,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-
   "description": "Front End",
   "main": "index.js",
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ccpinotti/wayfarer-react.git"
