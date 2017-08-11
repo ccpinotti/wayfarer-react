@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import CityList from "./CityList";
+import CityStuff from "./CityStuff";
 
 class CityBox extends Component {
   render() {
-    return <div>hello world</div>;
+    return (
+      <div>
+        <CityList />
+        <CityStuff />
+      </div>
+    );
   }
 }
 

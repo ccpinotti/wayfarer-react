@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Nav extends Component {
   render() {
-    return <div>hello world</div>;
+    return <div>Nav</div>;
   }
 }
 
