@@ -5,7 +5,13 @@ class PostList extends Component {
   render() {
     return (
       <div>
-        <Post />
+        <div className="container">
+          <div className="col city-posts">
+            <h5>Posts</h5>
+            <div className="divider" />
+            <Post />
+          </div>
+        </div>
       </div>
     );
   }
