@@ -6,8 +6,10 @@ class CityBox extends Component {
   render() {
     return (
       <div>
-        <CityList />
-        <CityStuff />
+        <div className='row'>
+          <CityList />
+          <CityStuff />
+        </div>
       </div>
     );
   }
