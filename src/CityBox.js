@@ -3,8 +3,6 @@ import CityList from "./CityList";
 import CityStuff from "./CityStuff";
 import CityModel from "./models/City";
 
-
-
 class CityBox extends Component {
   constructor(props) {
     super(props)
@@ -30,10 +28,10 @@ class CityBox extends Component {
     return (
       <div>
         <div className='row'>
+          <CityStuff />
           <CityList
             cities={this.state.cities}
              />
-          <CityStuff />
         </div>
       </div>
     );

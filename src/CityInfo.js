@@ -3,18 +3,15 @@ import React, { Component } from "react";
 class CityInfo extends Component {
   render() {
     return(
-    <div>
-        {/* Current City Selection panel */}
-        <div className="container">
-          <div className="col s4">
-            <h5>San Francisco</h5>
-            <h6>United States</h6>
-          </div>
-          <div className="col s8">
-            <img className="responsive-image right " src="https://cache-graphicslib.viator.com/graphicslib/thumbs360x240/2660/SITours/san-francisco-deluxe-half-day-city-tour-in-san-francisco-117240.jpg" alt="cityHero"/>
-          </div>
+      <div className="card">
+        <div className="card-image">
+          <img src="http://www.sftravel.com/sites/sftraveldev.prod.acquia-sites.com/files/SanFrancisco_0.jpg" className="responsive-img" />
+          <span className="card-title">
+            San Francisco<br />
+            United States of America
+          </span>
         </div>
-    </div>
+      </div>
     )
   }
 }
