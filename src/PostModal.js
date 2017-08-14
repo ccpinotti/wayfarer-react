@@ -1,16 +1,21 @@
 import React from 'react';
-import { Modal } from 'react-materialize';
+import { Modal, Row, Input, Icon } from 'react-materialize';
 
 class PostModal extends React.Component{
 
 render(){
     return(
         <Modal
-          header='Modal Header'
+          header='New Post'
           trigger={
             <a><i className="small material-icons" title="Add a Post">add_circle</i></a>
           }>
-          <p>Lorem ipsum dolor sit amet</p>
+          <Row>
+		        <Input s={6} label="Title" validate><Icon>title</Icon></Input>
+          </Row>
+          <Row>
+            <Input s={6} label="Description" validate><Icon>text</Icon></Input>
+          </Row>
         </Modal>
     );
 }
