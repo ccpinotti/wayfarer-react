@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import styles from "./CityView";
 
 class CityView extends Component {
   render() {
     return (
       <div className="row">
         <div className="card" id="this.props.city._id">
-          <a href="#">
+          <a href="/cities/1">
             <div className="card-image">
-              <img src={this.props.city.cityImage} width="100%" height="auto"/>
+              <img src={this.props.city.cityImage} className='responsive-img' alt='city'/>
               <span className="card-title">{this.props.city.cityName}</span>
             </div>
           </a>

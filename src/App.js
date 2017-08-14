@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CityBox from "./CityBox";
 import Nav from "./Nav";
-import CityStuff from "./CityStuff";
 
 class App extends Component {
   render() {

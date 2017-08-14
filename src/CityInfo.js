@@ -5,10 +5,10 @@ class CityInfo extends Component {
     return(
       <div className="card">
         <div className="card-image">
-          <img src="http://www.sftravel.com/sites/sftraveldev.prod.acquia-sites.com/files/SanFrancisco_0.jpg" className="responsive-img" />
+          <img src={this.props.city.cityImage} className="responsive-img" alt='city' />
           <span className="card-title">
-            San Francisco<br />
-            United States of America
+            {this.props.city.cityName}<br />
+            {this.props.city.cityCountry}
           </span>
         </div>
       </div>
