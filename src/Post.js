@@ -35,7 +35,7 @@ class Post extends Component {
                 username
               </div>
             </a>
-            <a href="/cities/1"><i className="small material-icons" title="Edit">edit</i></a>
+            <EditModal handleHideModal={this.handleHideModal} handleShowModal={this.state.view.showModal}/>
             <a href="/cities/1"><i className="small material-icons" title="Delete">delete</i></a>
           </div>
         </div>

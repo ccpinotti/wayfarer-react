@@ -7,7 +7,7 @@ class EditModal extends Component {
           <Modal
             header='Modal Header'
             trigger={
-              <Button waves='light'>MODAL</Button>
+              <i className="small material-icons" title="Edit">edit</i>
             }>
             <p>Lorem ipsum dolor sit amet</p>
           </Modal>
@@ -15,7 +15,7 @@ class EditModal extends Component {
   }
   propTypes:{
       handleHideModal: React.PropTypes.func.isRequired,
-      show: React.PropTypes.bool.isRequired,
+      handleShowModal: React.PropTypes.bool.isRequired,
   }
 };
 
