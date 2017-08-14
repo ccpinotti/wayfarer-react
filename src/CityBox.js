@@ -3,12 +3,9 @@ import CityList from "./CityList";
 import CityStuff from "./CityStuff";
 import CityModel from "./models/City";
 
-
-
 class CityBox extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
       cities: []
     }
@@ -24,16 +21,16 @@ class CityBox extends Component {
         cities: res.cities
       })
     })
-
   }
+
   render() {
     return (
       <div>
         <div className='row'>
+          <CityStuff/>
           <CityList
             cities={this.state.cities}
-             />
-          <CityStuff />
+          />
         </div>
       </div>
     );
