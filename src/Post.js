@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import EditModal from "./EditModal";
+import DeleteModal from "./DeleteModal";
 import style from "./style";
 
 class Post extends Component {
@@ -35,8 +36,8 @@ class Post extends Component {
                 username
               </div>
             </a>
-            <EditModal handleHideModal={this.handleHideModal} handleShowModal={this.state.view.showModal}/>
-            <a href="/cities/1"><i className="small material-icons" title="Delete">delete</i></a>
+            <a><EditModal handleHideModal={this.handleHideModal} handleShowModal={this.state.view.showModal}/></a>
+            <a><DeleteModal handleHideModal={this.handleHideModal} handleShowModal={this.state.view.showModal}/></a>
           </div>
         </div>
       </div>
