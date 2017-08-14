@@ -20,7 +20,7 @@ class PostModal extends React.Component{
     }
     this.props.handleNewPost(data);
     this.setState({newTitle: '', newDescription:''});
-    document.getElementById('modal_3').remove();
+    document.getElementById('modal_0').remove();
 
 
   }
