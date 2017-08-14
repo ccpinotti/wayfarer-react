@@ -8,9 +8,9 @@ class CityList extends Component {
     let cityArray = this.props.cities.map( (city) => {
       return (
         <CityView
-          key={city._id}
           city={city}
-          />
+          key={city._id}
+        />
       )
     })
     return (
