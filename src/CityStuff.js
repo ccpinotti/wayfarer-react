@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CityInfo from "./CityInfo";
 import PostList from "./PostList";
 import CityModel from "./models/City";
+import $ from 'jquery-ajax'
 
 class CityStuff extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class CityStuff extends Component {
       city: [],
       cityId: '',
       posts: []
+
     }
     this.deletePost = this.deletePost.bind(this);
   }
@@ -36,6 +38,19 @@ class CityStuff extends Component {
     this.forceUpdate();
   }
 
+handleNewPost(newPost){
+  console.log(newPost);
+
+  CityModel.createPost(newPost);
+
+}
+componentDidUpdate(prevProps,prevState) {
+    if(prevProps !== prevState){
+      console.log("COMPONENT UPDATED!!!");
+      this.fetchData();
+    }
+  }
+
   render() {
     return (
       <div>
@@ -48,7 +63,9 @@ class CityStuff extends Component {
           <PostList
               posts={this.state.posts}
               key={this.state.cityId}
-              deletePost={this.deletePost}/>
+              deletePost={this.deletePost}
+              handleNewPost = {this.handleNewPost.bind(this)}
+              posts={this.state.posts}/>
         </div>
       </div>
     );

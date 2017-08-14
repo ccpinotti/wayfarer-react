@@ -1,4 +1,4 @@
-import $ from 'jquery-ajax'
+import $ from 'jquery-ajax';
 
 class CityModel {
   static all() {
@@ -15,6 +15,14 @@ class CityModel {
     })
     return request;
   }
+  static createPost(data) {
+    let request = $.ajax({
+      method: 'POST',
+      url: 'https://aqueous-badlands-79359.herokuapp.com/api/cities/598dfa10547c7100076323ef/posts',
+      data: data
+    })
+    return request;
+    console.log('were logged!');
+  }
 }
-
 export default CityModel
