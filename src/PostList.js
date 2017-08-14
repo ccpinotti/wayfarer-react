@@ -26,8 +26,10 @@ class PostList extends Component {
       return (
         <Post
           key={post._id}
+          uniqueID={post._id}
           title={post.title}
           description={post.description}
+          deletePost={this.props.deletePost}
         />
       )
     })
