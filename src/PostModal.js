@@ -19,7 +19,9 @@ class PostModal extends React.Component{
       description: this.state.newDescription
     }
     this.props.handleNewPost(data);
-    //this.setState({newTitle: '', newDescription:''});
+    this.setState({newTitle: '', newDescription:''});
+    document.getElementById('modal_0').remove();
+
 
   }
   handleTitleChange(e){
@@ -49,6 +51,7 @@ render(){
 propTypes:{
     handleHideModal: React.PropTypes.func.isRequired,
     show: React.PropTypes.bool.isRequired,
+
 }
 };
 

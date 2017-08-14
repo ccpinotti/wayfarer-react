@@ -33,7 +33,12 @@ handleNewPost(newPost){
   CityModel.createPost(newPost);
 
 }
-
+componentDidUpdate(prevProps,prevState) {
+    if(prevProps !== prevState){
+      console.log("COMPONENT UPDATED!!!");
+      this.fetchData();
+    }
+  }
   render() {
     return (
       <div>

@@ -22,6 +22,7 @@ class CityModel {
       data: data
     })
     return request;
+    console.log('were logged!');
   }
 }
 export default CityModel
