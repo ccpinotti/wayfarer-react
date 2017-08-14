@@ -13,8 +13,8 @@ class Post extends Component {
           <div className="card-action">
             <a href="/cities/1">
               <div className="chip">
-                <img src="https://avatars1.githubusercontent.com/u/27825269?v=4&s=460" alt="Contact Person" />
-                dalazaro
+                <img src="https://4.bp.blogspot.com/-RjVJDW-Q874/V-Th_B3Kc9I/AAAAAAAAIXo/pVqDKtW2Gwga1mRiGDDErnQAzf2h4-qTQCLcB/s1600/d23e26005a967cbfba0f6738b596cfd0.png" alt="Contact Person" />
+                username
               </div>
             </a>
             <a href="/cities/1"><i className="small material-icons" title="Edit">edit</i></a>
