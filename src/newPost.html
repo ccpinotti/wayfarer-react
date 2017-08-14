@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="utf-8">
+  <title>Wayfarer - SF</title>
+</head>
+
+<body>
+  <!-- Adding Materialize Javascript & jQuery CDNs -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  <!--Script Document Ready select.material_select is required for materialize forms  -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $("select").material_select();
+    });
+  </script>
+
+  <!-- Create a New Post Form - Title, Message Body, & City  -->
+  <div class="container">
+
+    <div class="row">
+      <form class="col s12">
+        <div class="input-field col s4">
+          <select>
+              <option value="" disabled selected>Choose your city</option>
+              <option value="1">San Francisco</option>
+              <option value="2">London</option>
+              <option value="3">Gibraltar</option>
+            </select>
+          <label>City Select</label>
+        </div>
+        <div class="row">
+          <div class="input-field col s8">
+            <i class="material-icons prefix">title</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Title</label>
+          </div>
+          <div class="row">
+            <div class="input-field col s8">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea id="icon_prefix" class="materialize-textarea"></textarea>
+              <label for="icon_prefix">Post</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
