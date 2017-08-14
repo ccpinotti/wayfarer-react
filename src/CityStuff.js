@@ -9,9 +9,11 @@ class CityStuff extends Component {
     super(props)
     this.state = {
       city: [],
+      cityId: '',
       posts: []
 
     }
+    this.deletePost = this.deletePost.bind(this);
   }
 
   componentDidMount() {
@@ -22,9 +24,18 @@ class CityStuff extends Component {
     CityModel.city().then( (res) => {
       this.setState({
         city: res.city,
+        cityId: res.city._id,
         posts: res.city.posts
       })
     })
+  }
+
+  deletePost(post){
+    let currentPostsList = this.state.posts;
+    let postIndex = currentPostsList.indexOf(post);
+    currentPostsList.splice(postIndex, 1);
+    this.setState({ posts: currentPostsList });
+    this.forceUpdate();
   }
 
 handleNewPost(newPost){
@@ -39,15 +50,20 @@ componentDidUpdate(prevProps,prevState) {
       this.fetchData();
     }
   }
+
   render() {
     return (
       <div>
         <div className='col s12 m8 right'>
           <div className='row'>
             <CityInfo
-              city={this.state.city} />
+              city={this.state.city}
+              key={this.state.cityId} />
           </div>
           <PostList
+              posts={this.state.posts}
+              key={this.state.cityId}
+              deletePost={this.deletePost}
               handleNewPost = {this.handleNewPost.bind(this)}
               posts={this.state.posts}/>
         </div>
