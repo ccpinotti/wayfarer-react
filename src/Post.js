@@ -1,7 +1,25 @@
 import React, { Component } from "react";
+import EditModal from "./EditModal";
 import style from "./style";
 
 class Post extends Component {
+
+  constructor(props){
+    super(props);
+    this.state={
+      view: { showModal: false }
+    }
+    this.handleHideModal=this.handleHideModal.bind(this);
+    this.handleShowModal=this.handleShowModal.bind(this);
+  }
+
+  handleHideModal(){
+      this.setState({view: {showModal: false}})
+  }
+  handleShowModal(){
+      this.setState({view: {showModal: true}})
+  }
+
   render() {
     return (
       <div className="card">
@@ -17,7 +35,7 @@ class Post extends Component {
                 username
               </div>
             </a>
-            <a href="/cities/1"><i className="small material-icons" title="Edit">edit</i></a>
+            <EditModal handleHideModal={this.handleHideModal} handleShowModal={this.state.view.showModal}/>
             <a href="/cities/1"><i className="small material-icons" title="Delete">delete</i></a>
           </div>
         </div>
