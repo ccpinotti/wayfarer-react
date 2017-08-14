@@ -1,24 +1,26 @@
 import React, { Component } from "react";
+import style from "./style";
 
 class Post extends Component {
   render() {
     return (
-      <div>
-        <div className="row" id="city-post">
-          <img
-            className="left user-img"
-            src="https://success.salesforce.com/resource/1499731200000/sharedlayout/img/new-user-image-default.png"
-            alt="post-image"
-          />
-          <h6>Title</h6>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the , when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
-          </p>
+      <div className="card">
+        <div className="card-stacked">
+          <div className="card-content">
+            <h4 style={ style.postTitle }>{this.props.title}</h4>
+            <p style={ style.postText }>{this.props.description}</p>
+          </div>
+          <div className="card-action">
+            <a href="/cities/1">
+              <div className="chip">
+                <img src="https://4.bp.blogspot.com/-RjVJDW-Q874/V-Th_B3Kc9I/AAAAAAAAIXo/pVqDKtW2Gwga1mRiGDDErnQAzf2h4-qTQCLcB/s1600/d23e26005a967cbfba0f6738b596cfd0.png" alt="Contact Person" />
+                username
+              </div>
+            </a>
+            <a href="/cities/1"><i className="small material-icons" title="Edit">edit</i></a>
+            <a href="/cities/1"><i className="small material-icons" title="Delete">delete</i></a>
+          </div>
         </div>
-        <div className="divider" />
       </div>
     );
   }
