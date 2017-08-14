@@ -34,7 +34,15 @@ class PostList extends Component {
     return (
       <div>
         <div className="container">
-          <h3 className="center-align" style={ style.postsHeader }>Posts <PostModal handleHideModal={this.handleHideModal} show={this.state.view.showModal}/></h3>
+          <h3
+            className="center-align"
+            style={ style.postsHeader }>
+            Posts
+            <PostModal
+              handleHideModal={this.handleHideModal}
+              handleNewPost={this.props.handleNewPost}
+              show={this.state.view.showModal}/>
+          </h3>
           { postArray }
         </div>
 

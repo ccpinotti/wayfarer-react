@@ -13,23 +13,14 @@ class PostModal extends React.Component{
   }
   handleSubmit(e){
     e.preventDefault();
-    let title = this.state.newTitle;
-    let description = this.state.newDescription;
-    $.ajax({
-      method: 'POST',
-      url: 'https://aqueous-badlands-79359.herokuapp.com/api/cities/598dfa10547c7100076323f8/posts',
-      data: {
-        title: title,
-        description: description,
+    // call handleNewPost up here
+    let data = {
+      title: this.state.newTitle,
+      description: this.state.newDescription
+    }
+    this.props.handleNewPost(data);
+    //this.setState({newTitle: '', newDescription:''});
 
-      }
-    })
-    .then(res => {
-      console.log('res is ', res);
-      this.setState({newTitle: '', newDescription:''});
-    }, err => {
-      console.log(err);
-    });
   }
   handleTitleChange(e){
     this.setState({newTitle: e.target.value});
