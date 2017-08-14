@@ -37,7 +37,12 @@ class Post extends Component {
               </div>
             </a>
             <a><EditModal handleHideModal={this.handleHideModal} handleShowModal={this.state.view.showModal}/></a>
-            <a><DeleteModal handleHideModal={this.handleHideModal} handleShowModal={this.state.view.showModal}/></a>
+            <a><DeleteModal
+              handleHideModal={this.handleHideModal}
+              handleShowModal={this.state.view.showModal}
+              title={this.props.title}
+              uniqueID={this.props.uniqueID}
+            /></a>
           </div>
         </div>
       </div>
