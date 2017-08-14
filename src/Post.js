@@ -7,11 +7,11 @@ class Post extends Component {
 
   constructor(props){
     super(props);
-    this.state={
+    this.state = {
       view: { showModal: false }
     }
-    this.handleHideModal=this.handleHideModal.bind(this);
-    this.handleShowModal=this.handleShowModal.bind(this);
+    this.handleHideModal = this.handleHideModal.bind(this);
+    this.handleShowModal = this.handleShowModal.bind(this);
   }
 
   handleHideModal(){
@@ -36,12 +36,13 @@ class Post extends Component {
                 username
               </div>
             </a>
-            <a><EditModal handleHideModal={this.handleHideModal} handleShowModal={this.state.view.showModal}/></a>
+            <a><EditModal handleHideModal={this.handleHideModal} showModal={this.state.view.showModal}/></a>
             <a><DeleteModal
               handleHideModal={this.handleHideModal}
-              handleShowModal={this.state.view.showModal}
+              showModal={this.state.view.showModal}
               title={this.props.title}
               uniqueID={this.props.uniqueID}
+              deletePost={this.props.deletePost}
             /></a>
           </div>
         </div>

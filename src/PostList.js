@@ -11,6 +11,7 @@ class PostList extends Component {
           uniqueID={post._id}
           title={post.title}
           description={post.description}
+          deletePost={this.props.deletePost}
         />
       )
     })

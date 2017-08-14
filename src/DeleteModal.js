@@ -13,20 +13,21 @@ class DeleteModal extends Component {
   handlePostDelete() {
     let id = this.props.uniqueID;
     $.ajax({
-      method: 'DELETE',
-      url: 'https://aqueous-badlands-79359.herokuapp.com/api/cities/598dfa10547c7100076323ef/posts/' + id
+      url: 'https://aqueous-badlands-79359.herokuapp.com/api/cities/598dfa10547c7100076323ef/posts/' + id,
+      method: 'DELETE'
     })
     .then( (res) => {
       console.log('Post deleted');
     }, (err) => {
       console.log(err);
     })
-    this.forceUpdate()
+    this.props.deletePost();
   }
 
   render(){
     return(
       <Modal
+        id={`${this.props.uniqueID}-delete`}
         header='Delete this post?'
         trigger={
           <i className="small material-icons" title="Delete">delete</i>

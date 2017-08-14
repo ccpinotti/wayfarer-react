@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "jquery-ajax": "^2.1.4",
+    "jquery-lite": "^2.2.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-materialize": "^1.0.8",

@@ -11,6 +11,7 @@ class CityStuff extends Component {
       cityId: '',
       posts: []
     }
+    this.deletePost = this.deletePost.bind(this);
   }
 
   componentDidMount() {
@@ -27,6 +28,14 @@ class CityStuff extends Component {
     })
   }
 
+  deletePost(post){
+    let currentPostsList = this.state.posts;
+    let postIndex = currentPostsList.indexOf(post);
+    currentPostsList.splice(postIndex, 1);
+    this.setState({ posts: currentPostsList });
+    this.forceUpdate();
+  }
+
   render() {
     return (
       <div>
@@ -38,7 +47,8 @@ class CityStuff extends Component {
           </div>
           <PostList
               posts={this.state.posts}
-              key={this.state.cityId} />
+              key={this.state.cityId}
+              deletePost={this.deletePost}/>
         </div>
       </div>
     );
