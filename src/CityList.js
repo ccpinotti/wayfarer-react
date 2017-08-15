@@ -5,7 +5,7 @@ import style from "./style";
 class CityList extends Component {
 
   render() {
-    let cityArray = this.props.cities.map( (city) => {
+    let cityArray = this.props.cities.reverse().map( (city) => {
       return (
         <CityView
           city={city}
