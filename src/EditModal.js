@@ -41,6 +41,7 @@ class EditModal extends Component {
     return (
       <Modal
         header="Edit Post"
+        fixedFooter
         trigger={
           <a>
             <i className="small material-icons" title="Edit a Post">

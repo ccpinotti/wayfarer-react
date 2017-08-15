@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import EditModal from "./EditModal";
 import DeleteModal from "./DeleteModal";
+import ViewModal from "./ViewModal";
 import style from "./style";
 
 class Post extends Component {
@@ -25,9 +26,11 @@ class Post extends Component {
       <div className="card">
         <div className="card-stacked">
           <div className="card-content">
-            <h4 style={style.postTitle}>
-              {this.props.title}
-            </h4>
+            <ViewModal
+              title={this.props.title}
+              description={this.props.description}
+              uniqueID={this.props.uniqueID}
+            />
             <p style={style.postText}>
               {this.props.description}
             </p>
