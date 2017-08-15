@@ -22,7 +22,7 @@ class PostList extends Component {
   }
 
   render() {
-    let postArray = this.props.posts.map( (post) => {
+    let postArray = this.props.posts.reverse().map( (post) => {
       return (
         <Post
           key={post._id}
