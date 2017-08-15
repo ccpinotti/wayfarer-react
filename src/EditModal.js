@@ -54,6 +54,7 @@ class EditModal extends Component {
             s={6}
             label="Title"
             onChange={this.handleTitleChange}
+            data-length="10"
             value={this.state.title}
             validate
           >
@@ -61,15 +62,17 @@ class EditModal extends Component {
           </Input>
         </Row>
         <Row>
-          <Input
+          <textarea
             s={6}
             label="Description"
             onChange={this.handleDescriptionChange}
+            class="materialize-textarea"
+            data-length="120"
             value={this.state.description}
             validate
           >
             <Icon>note</Icon>
-          </Input>
+          </textarea>
         </Row>
         <Button onClick={this.handleSubmit}>Submit</Button>
       </Modal>
