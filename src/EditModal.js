@@ -50,29 +50,35 @@ class EditModal extends Component {
         }
       >
         <Row>
-          <Input
-            s={6}
-            label="Title"
-            onChange={this.handleTitleChange}
-            data-length="10"
-            value={this.state.title}
-            validate
-          >
-            <Icon>title</Icon>
-          </Input>
+          <div class="input-field col s6">
+            <Input
+              s={6}
+              label="Title"
+              onChange={this.handleTitleChange}
+              class="materialize-textarea"
+              data-length="10"
+              type="text"
+              value={this.state.title}
+              validate
+            >
+              <Icon>title</Icon>
+            </Input>
+          </div>
         </Row>
         <Row>
-          <textarea
-            s={6}
-            label="Description"
-            onChange={this.handleDescriptionChange}
-            class="materialize-textarea"
-            data-length="120"
-            value={this.state.description}
-            validate
-          >
-            <Icon>note</Icon>
-          </textarea>
+          <div class="input-field col s10">
+            <textarea
+              s={6}
+              label="Description"
+              onChange={this.handleDescriptionChange}
+              class="materialize-textarea"
+              data-length="80"
+              value={this.state.description}
+              validate
+            >
+              <Icon>note</Icon>
+            </textarea>
+          </div>
         </Row>
         <Button onClick={this.handleSubmit}>Submit</Button>
       </Modal>
