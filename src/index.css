@@ -1,0 +1,28 @@
+.city-nav-img {
+  padding-right: 15px;
+}
+#city-post {
+  /*border: solid 2px red;*/
+}
+.user-img {
+  padding: 0px 15px 15px 15px;
+}
+div.breadcrumbs {
+  padding-top: 20px;
+  padding-left: 50px;
+}
+a.breadcrumb {
+  color: black;
+}
+a.breadcrumb::before {
+  color: black;
+}
+.breadcrumb:last-child {
+  color: black;
+}
+.post-text {
+  margin-top: 30px;
+}
+div.chip {
+  vertical-align: top;
+}
